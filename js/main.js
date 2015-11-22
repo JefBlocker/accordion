@@ -1,12 +1,8 @@
-$('li').on('click', 'button', function(event) {
-  var btn = $(event.target);
-  btn.addClass('flat-btn');
+$(document).ready(function() {
+  $("#accordion section h4").click(function(e) {
+    $(this).parents().siblings("section").addClass("ac_hidden");
+    $(this).parents("section").removeClass("ac_hidden");
+
+    e.preventDefault();
+  });
 });
-
-//Grabbing elements in the DOM <div class="box box1"></div>
-//Grabbing elements in the DOM <div class="box box2"></div>
-
-// Grabs both boxes $('.box'); 
-// Grabs just the first box $('.box1'); 
-
-// Chaining $('.box').html('Hello World').addClass('animated').css('margin-left, 25px');
